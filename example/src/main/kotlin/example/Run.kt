@@ -3,10 +3,30 @@
  */
 package example
 
-import lumberkodee.Library
+import lumberkodee.console.ConsoleLumberkodeeClient
+import lumberkodee.emoji.EmojiLumberkodeeClient
+import lumberkodee.logError
+import lumberkodee.logInfo
+import lumberkodee.logVerbose
+import lumberkodee.logWarning
+import lumberkodee.putLumberkodeeToWork
 
 fun main() {
-    val library = Library()
+    // Provide lumberkodee clients that will log messages.
+    val clients = arrayListOf(ConsoleLumberkodeeClient(), EmojiLumberkodeeClient())
 
-    println("Hello ${library.name()}")
+    // Put them to work!
+    putLumberkodeeToWork(clients)
+
+    // Start logging from top level API.
+    logInfo("My first lumberkodee logging message!")
+    logWarning("Attemping to install lumbrekodee from maven...")
+    logError(
+        "Could not install library...",
+        Exception(
+            "Package lumbrekodee does not exist! Make sure you download the correct one (@kotlinartisans/lumberkodee)"
+        )
+    )
+
+    logVerbose("Exiting...");
 }
