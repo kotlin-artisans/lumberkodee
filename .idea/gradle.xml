@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$" />
           </set>
         </option>
+        <option name="resolveExternalAnnotations" value="false" />
       </GradleProjectSettings>
       <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/example" />
@@ -20,6 +21,7 @@
             <option value="$PROJECT_DIR$/example" />
           </set>
         </option>
+        <option name="resolveExternalAnnotations" value="false" />
       </GradleProjectSettings>
     </option>
   </component>
