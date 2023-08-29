@@ -71,6 +71,10 @@ publishing {
     }
 }
 
+tasks.withType<AbstractPublishToMaven> {
+    dependsOn("build")
+}
+
 /**
  * Runs example project application
  */
