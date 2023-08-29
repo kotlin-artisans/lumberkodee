@@ -1,4 +1,4 @@
-package lumberkodee
+package com.github.kotlinartisans.lumberkodee
 
 val EMPTY_EXTRAS = emptyMap<String, String>()
 

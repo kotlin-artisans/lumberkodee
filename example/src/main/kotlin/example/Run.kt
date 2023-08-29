@@ -3,13 +3,13 @@
  */
 package example
 
-import lumberkodee.console.ConsoleLumberkodeeClient
-import lumberkodee.emoji.EmojiLumberkodeeClient
-import lumberkodee.logError
-import lumberkodee.logInfo
-import lumberkodee.logVerbose
-import lumberkodee.logWarning
-import lumberkodee.putLumberkodeeToWork
+import com.github.kotlinartisans.lumberkodee.console.ConsoleLumberkodeeClient
+import com.github.kotlinartisans.lumberkodee.emoji.EmojiLumberkodeeClient
+import com.github.kotlinartisans.lumberkodee.logError
+import com.github.kotlinartisans.lumberkodee.logInfo
+import com.github.kotlinartisans.lumberkodee.logVerbose
+import com.github.kotlinartisans.lumberkodee.logWarning
+import com.github.kotlinartisans.lumberkodee.putLumberkodeeToWork
 
 fun main() {
     // Provide lumberkodee clients that will log messages.

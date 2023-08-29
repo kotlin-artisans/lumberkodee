@@ -1,4 +1,4 @@
-package lumberkodee
+package com.github.kotlinartisans.lumberkodee
 
 /**
  * An interface for logging messages. Extend it to your own desires and styling and then

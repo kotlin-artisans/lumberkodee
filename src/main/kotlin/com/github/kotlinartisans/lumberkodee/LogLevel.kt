@@ -1,4 +1,4 @@
-package lumberkodee
+package com.github.kotlinartisans.lumberkodee
 
 /**
  * Defines supported logging levels.

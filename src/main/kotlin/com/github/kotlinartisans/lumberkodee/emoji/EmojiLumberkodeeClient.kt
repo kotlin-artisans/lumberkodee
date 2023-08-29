@@ -1,7 +1,7 @@
-package lumberkodee.emoji
+package com.github.kotlinartisans.lumberkodee.emoji
 
-import lumberkodee.LogLevel
-import lumberkodee.LumberkodeeClient
+import com.github.kotlinartisans.lumberkodee.LogLevel
+import com.github.kotlinartisans.lumberkodee.LumberkodeeClient
 
 /**
  * A rather simple [LumberkodeeClient] that uses [println] + emojis to log messages to console/stdout.

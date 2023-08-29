@@ -1,7 +1,7 @@
-package lumberkodee.console
+package com.github.kotlinartisans.lumberkodee.console
 
-import lumberkodee.LogLevel
-import lumberkodee.LumberkodeeClient
+import com.github.kotlinartisans.lumberkodee.LogLevel
+import com.github.kotlinartisans.lumberkodee.LumberkodeeClient
 
 /**
  * A rather simple [LumberkodeeClient] that uses [println] to log messages to console/stdout.
