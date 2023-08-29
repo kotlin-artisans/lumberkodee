@@ -1,7 +1,6 @@
 package lumberkodee
 
 val EMPTY_EXTRAS = emptyMap<String, String>()
-val EMPTY_THROWABLE = Throwable()
 
 /**
  * Global store of all [LumberkodeeClient] that have been put to work. These clients are stored
@@ -44,7 +43,7 @@ fun logWarning(message: String, extras: Map<String, String> = EMPTY_EXTRAS) =
  */
 fun logError(
     message: String,
-    throwable: Throwable = EMPTY_THROWABLE,
+    throwable: Throwable,
     extras: Map<String, String> = EMPTY_EXTRAS
 ) =
     clients.filter { it.supports(LogLevel.ERROR) }

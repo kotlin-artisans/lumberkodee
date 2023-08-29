@@ -78,13 +78,13 @@ class LumberkodeeTest {
     fun logsErrorMessageIfClientSupportsErrorLevel() {
         val client = mockk<LumberkodeeClient>(relaxed = true)
         val message = "this message should be logged"
-        val throwable = EMPTY_THROWABLE
+        val throwable = Throwable("something bad happened")
         val extras = EMPTY_EXTRAS
 
         every { client.supports(LogLevel.ERROR) } returns true
         putLumberkodeeToWork(arrayListOf(client))
 
-        logError(message)
+        logError(message, throwable)
 
         verify {
             client.error(message, throwable, extras)
@@ -95,13 +95,13 @@ class LumberkodeeTest {
     fun doesNotLogErrorMessageIfClientDoesNotSupportErrorLevel() {
         val client = mockk<LumberkodeeClient>(relaxed = true)
         val message = "this message should not be logged"
-        val throwable = EMPTY_THROWABLE
+        val throwable = Throwable("something bad happened")
         val extras = EMPTY_EXTRAS
 
         every { client.supports(LogLevel.ERROR) } returns false
         putLumberkodeeToWork(arrayListOf(client))
 
-        logError(message)
+        logError(message, throwable)
 
         verify(exactly = 0) {
             client.error(message, throwable, extras)
