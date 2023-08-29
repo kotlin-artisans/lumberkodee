@@ -8,5 +8,5 @@ enum class LogLevel {
     WARNING,
     ERROR,
     DEBUG,
-    VERBOSE;
+    VERBOSE
 }
