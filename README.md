@@ -2,6 +2,8 @@
 
 A simple, yet clean, top-level logging API with support for multiple clients with zero modification fees 🪵
 
+<p align="center"><img src="art/logo.svg" alt="svg of library logo" style="width: 30%"></p>
+
 ---
 
 ## How to use
