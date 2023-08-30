@@ -48,10 +48,9 @@ publishing {
             artifactId = project.name
             groupId = "com.github.kotlin-artisans"
             version = "0.0.1"
-            artifact("$buildDir/libs/${project.name}.jar")
+            artifact("build/libs/${project.name}.jar")
             File(".").list().forEach(::println)
-            println("------ | $buildDir")
-            buildDir.list().forEach(::println)
+
 
 
             /* Copied from: https://medium.com/@stpatrck/publish-an-android-library-to-github-packages-8dfff3ececcb */
