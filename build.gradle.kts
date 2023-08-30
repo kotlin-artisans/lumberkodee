@@ -50,7 +50,7 @@ afterEvaluate {
                 artifactId = project.name
                 groupId = "com.github.kotlin-artisans"
                 version = "0.0.1"
-                artifact("build/libs/${project.name}.jar")
+                artifact("$buildDir/libs/${project.name}.jar")
                 File(".").list().forEach(::println)
                 println("------ | $buildDir")
                 components.forEach { println(it.name) }
