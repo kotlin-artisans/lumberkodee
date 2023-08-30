@@ -28,11 +28,11 @@ detekt {
 }
 
 publishing {
-    val localProperties = Properties().apply {
+    /*val localProperties = Properties().apply {
         load(FileInputStream(rootProject.file("local.properties")))
-    }
+    }*/
 
-    repositories {
+    /*repositories {
         maven {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/kotlin-artisans/${project.name}")
@@ -41,7 +41,7 @@ publishing {
                 password = "${localProperties["maven.gh.pkg.pat"]}"
             }
         }
-    }
+    }*/
 
     publications {
         register("release", MavenPublication::class) {
@@ -50,6 +50,7 @@ publishing {
             version = "0.0.1"
             artifact("build/libs/${project.name}.jar")
             File(".").list().forEach(::println)
+            println("------ | $buildDir")
 
 
 
