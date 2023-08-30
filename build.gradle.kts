@@ -27,7 +27,6 @@ detekt {
     autoCorrect = true
 }
 
-afterEvaluate {
 
     publishing {
         /*val localProperties = Properties().apply {
@@ -46,7 +45,7 @@ afterEvaluate {
     }*/
 
         publications {
-            register("release", MavenPublication::class) {
+            /*register("release", MavenPublication::class) {
                 artifactId = project.name
                 groupId = "com.github.kotlin-artisans"
                 version = "0.0.1"
@@ -55,7 +54,8 @@ afterEvaluate {
                 println("------ | $buildDir")
                 components.forEach { println(it.name) }
 
-                /* Copied from: https://medium.com/@stpatrck/publish-an-android-library-to-github-packages-8dfff3ececcb */
+
+                *//* Copied from: https://medium.com/@stpatrck/publish-an-android-library-to-github-packages-8dfff3ececcb *//*
                 pom {
                     withXml {
                         val dependencies = asNode().appendNode("dependencies")
@@ -72,10 +72,18 @@ afterEvaluate {
                         }
                     }
                 }
+            }*/
+
+            create<MavenPublication>("maven") {
+                artifactId = "lumberkodee"
+                groupId = "com.kotlin-artisans"
+                version = "0.0.1"
+
+                from(components["java"])
             }
         }
     }
-}
+
 
 tasks.withType<AbstractPublishToMaven> {
     dependsOn("build")
