@@ -1,0 +1,10 @@
+{
+  "name": "@kotlin-artisans/lumberkodee",
+  "description": "A simple, yet clean, top-level logging API with support for multiple clients with zero modification fees \uD83E\uDEB5",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": {
+    "name": "kotlin-artisans",
+    "url": "https://joaomagfreitas.link"
+  }
+}
