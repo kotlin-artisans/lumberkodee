@@ -14,7 +14,6 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16.x
-          cache: 'npm'
 
       - run: npm install --frozen-lockfile
       - name: Create Release Pull Request or Publish
