@@ -16,7 +16,7 @@ jobs:
           node-version: 16.x
           cache: 'npm'
 
-      - run: npm install --global @changesets/cli
+      - run: npm install --frozen-lockfile
       - name: Create Release Pull Request or Publish
         id: changesets
         uses: changesets/action@v1
